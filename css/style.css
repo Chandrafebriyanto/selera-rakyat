@@ -14,9 +14,9 @@
   scroll-behavior: smooth;
 }
 
-/* html{
+html{
     overflow-x: hidden;
-} */
+}
 
 body::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
@@ -54,6 +54,11 @@ a {
   color: var(--first-color);
   z-index: 100;
   font-size: 1.2rem;
+}
+
+.text h1 span {
+  color: var(--second-color);
+  font-family: "Yeseva One";
 }
 
 .btn-explore {
@@ -226,7 +231,7 @@ input:hover {
 .about {
   padding: 2rem;
   text-align: center;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -315,6 +320,20 @@ input:hover {
 .btn-more:hover {
   background-color: var(--second-color);
   color: var(--fourth-color);
+}
+
+footer{
+  background-color: var(--third-color);
+  color: var(--first-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  padding: 20px;
+}
+
+footer img{
+  height: 200px;
 }
 
 /* note: Sticky */
@@ -423,7 +442,7 @@ header.sticky .group:has(.input:hover) .input::placeholder {
     display: block;
     fill: #4e1f00;
   }
-
+  
   .input {
     height: 30px;
     line-height: 20px;
@@ -444,16 +463,16 @@ header.sticky .group:has(.input:hover) .input::placeholder {
   }
   10% {
     opacity: 1;
-  } /* Muncul */
+  }
   30% {
     opacity: 1;
-  } /* Tahan */
+  } 
   40% {
     opacity: 0;
-  } /* Hilang */
+  } 
   100% {
     opacity: 0;
-  } /* Diam di luar animasi */
+  } 
 }
 
 /* Keyframes untuk animasi slideDown */

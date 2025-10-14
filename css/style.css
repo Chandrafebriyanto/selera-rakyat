@@ -43,7 +43,34 @@ a {
   height: 100vh; /* Sesuaikan tinggi sesuai kebutuhan */
   overflow: hidden;
   position: relative;
-  filter: brightness(50%);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--first-color);
+  z-index: 100;
+  font-size: 1.2rem;
+}
+
+.btn-explore {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--second-color);
+  color: var(--first-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--third-color);
 }
 
 .slide {
@@ -52,6 +79,7 @@ a {
   background-size: cover; /* Menyesuaikan gambar agar menutupi seluruh area */
   background-position: center; /* Memposisikan gambar di tengah */
   position: absolute;
+  filter: brightness(65%);
   top: 0;
   left: 0;
   opacity: 0; /* Sembunyikan semua slide secara default */
@@ -195,16 +223,110 @@ input:hover {
   transition: 0.3s ease;
 }
 
+.about {
+  padding: 2rem;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--fourth-color);
+}
+
+.menu {
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.menu-items {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.menu-item {
+  align-content: center;
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item img {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.menu-item img:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--second-color) 0px 0px 10px 0px;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: none;
+  color: var(--first-color);
+  border: 1px solid var(--first-color);
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-more:hover {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+}
+
 /* note: Sticky */
 header.sticky {
-  position: fixed; 
-  background-color: var(--first-color); 
+  position: fixed;
+  background-color: var(--first-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: slideDown 0.5s ease-in-out;
 }
 
 header.sticky ul li a {
-  color: var(--third-color); 
+  color: var(--third-color);
 }
 
 header.sticky .header-left h1 {

@@ -15,8 +15,8 @@
   scroll-behavior: smooth;
 }
 
-html{
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -44,7 +44,7 @@ a {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
 }
 
 .text {
@@ -61,13 +61,13 @@ a {
 .slide {
   width: 100%;
   height: 100%;
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   position: absolute;
   filter: brightness(65%);
   top: 0;
   left: 0;
-  animation: slide-animation 12s infinite; 
+  animation: slide-animation 12s infinite;
 }
 
 /* Mengatur urutan setiap slide dalam animasi */
@@ -251,7 +251,7 @@ input:hover {
 .menu {
   background-color: var(--fourth-color);
   color: var(--first-color);
-  padding: 2rem;
+  padding: 4rem;
   text-align: center;
   overflow: hidden;
 }
@@ -318,15 +318,107 @@ input:hover {
   color: var(--fourth-color);
 }
 
+/* note: Section Promo -------------------------------------------------------------- */
+.promo {
+  place-self: center;
+  padding: 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.coupon-container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);;
+}
+
+.coupon-container:hover{
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--third-color) 0px 0px 10px 0px;
+}
+
+.coupon-header {
+  background-color: #4e1f00;
+  color: var(--first-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.coupon-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.coupon-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.coupon-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.coupon-code {
+  margin-bottom: 20px;
+}
+
+.coupon-code h3 {
+  color: #333;
+  margin: 0;
+  font-size: 18px;
+}
+
+.coupon-code p {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--second-color);
+  margin: 10px 0 0;
+  background-color: #f8f4e1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.coupon-details {
+  font-size: 14px;
+  color: #666;
+}
+
+.coupon-details p {
+  margin: 5px 0;
+}
+
+.coupon-footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.coupon {
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+  gap: 20px;
+}
+
 /* note: footer --------------------------------------------------------------------- */
-footer{
+footer {
   background-color: var(--third-color);
   color: var(--first-color);
   padding: 1rem;
   text-align: center;
 }
 
-.main-footer, .second-footer{
+.main-footer,
+.second-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -334,35 +426,57 @@ footer{
   margin: 20px auto;
 }
 
-.footer-left img{
+.footer-left img {
   height: 200px;
 }
 
-.footer-left h1{
+.footer-left h1 {
   color: var(--second-color);
   font-family: "yeseva one";
 }
 
-.footer-right img{
+.footer-left p {
+  font-size: 1.2rem;
+}
+
+.footer-right img {
   height: 40px;
   margin: 0 0.3rem;
   transition: all 0.3s;
   transform: translateY(0);
 }
 
-.footer-right img:hover{
+.footer-right img:hover {
   transform: translateY(-10px);
   transition: all 0.3s;
   margin: 0 0.5rem;
 }
 
-.second-footer .footer-left{
+.second-footer-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.second-footer .footer-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 7rem;
 }
 
+.second-footer .footer-right a {
+  color: white;
+  margin: 0 0.5rem;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.second-footer .footer-right a:hover {
+  color: var(--second-color);
+  transition: all 0.3s;
+}
 
 /* note: Sticky --------------------------------------------------------------------- */
 header.sticky {
@@ -470,7 +584,7 @@ header.sticky .group:has(.input:hover) .input::placeholder {
     display: block;
     fill: #4e1f00;
   }
-  
+
   .input {
     height: 30px;
     line-height: 20px;
@@ -495,13 +609,13 @@ header.sticky .group:has(.input:hover) .input::placeholder {
   }
   30% {
     opacity: 1;
-  } 
+  }
   40% {
     opacity: 0;
-  } 
+  }
   100% {
     opacity: 0;
-  } 
+  }
 }
 
 /* note: Slide Down navbar animation */

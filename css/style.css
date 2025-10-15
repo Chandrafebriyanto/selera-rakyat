@@ -44,7 +44,6 @@ a {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  /* position: relative; */
 }
 
 .text {
@@ -283,10 +282,9 @@ input:hover {
 
 .menu-item img {
   max-width: 400px;
+  width: 100%; 
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block; 
   margin-bottom: 20px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
@@ -333,10 +331,10 @@ input:hover {
   width: 350px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  transform: translateY(0);;
+  transform: translateY(0);
 }
 
-.coupon-container:hover{
+.coupon-container:hover {
   transform: translateY(-10px);
   transition: all 0.3s ease-in-out;
   box-shadow: var(--third-color) 0px 0px 10px 0px;
@@ -524,7 +522,45 @@ header.sticky .group:has(.input:hover) .input::placeholder {
   transition: 0.3s ease;
 }
 
-/*  tittle: media responsif --------------------------------------------------------- */
+/* tittle: media responsif --------------------------------------------------------- */
+@media (max-width: 992px) {
+  .menu {
+    padding: 2rem;
+  }
+  .menu-items {
+    grid-template-columns: auto auto; 
+    gap: 1rem;
+  }
+  .coupon {
+    grid-template-columns: auto auto; 
+  }
+
+  .about {
+    height: auto; 
+    padding: 4rem 2rem;
+  }
+
+  .footer-left img {
+    height: 150px; 
+  }
+
+  .main-footer,
+  .second-footer {
+    flex-direction: column; 
+    gap: 1rem;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-right img {
+    height: 30px; 
+  }
+}
+
 @media (max-width: 779px) {
   .header-left img {
     height: 40px;
@@ -565,16 +601,20 @@ header.sticky .group:has(.input:hover) .input::placeholder {
   .header-left img {
     height: 30px;
   }
+
   .header-left h1 {
     font-size: 1.2rem;
   }
+
   header ul {
     gap: 0.5rem;
     font-size: 0.7rem;
   }
+
   header nav {
     display: none;
   }
+
   .group {
     max-width: 150px;
     gap: 0.5rem;
@@ -583,6 +623,8 @@ header.sticky .group:has(.input:hover) .input::placeholder {
   .hamburger {
     display: block;
     fill: #4e1f00;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .input {
@@ -590,11 +632,42 @@ header.sticky .group:has(.input:hover) .input::placeholder {
     line-height: 20px;
     padding-left: 1.5rem;
     font-size: 0.7rem;
+    display: none;
   }
+
   .icon {
     width: 0.7rem;
     height: 0.7rem;
     left: 0.7rem;
+  }
+
+  .menu-items,
+  .coupon {
+    grid-template-columns: 1fr; 
+  }
+  
+  .coupon-container {
+      width: 100%; 
+      max-width: 350px; 
+  }
+
+  .main-footer,
+  .second-footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-left img {
+    height: 100px; 
+  }
+
+  .footer-right img {
+    height: 25px; 
+  }
+  
+  .second-footer .footer-right a {
+    display: block;
+    margin: 0.2rem 0.7rem;
   }
 }
 

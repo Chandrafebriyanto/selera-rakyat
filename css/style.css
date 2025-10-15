@@ -274,12 +274,16 @@ input:hover {
 
 .menu-item {
   align-content: center;
-  /* height: 500px; */
+  height: fit-content;
 }
 
 .menu-item h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0; 
+}
+
+.menu-item p{
+  height: 120px;
 }
 
 .menu-item img {
@@ -310,7 +314,7 @@ input:hover {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -672,6 +676,7 @@ header.sticky .group:has(.input:hover) .input::placeholder {
     width: 0.7rem;
     height: 0.7rem;
     left: 0.7rem;
+    display: none;
   }
 
   .menu-items,
@@ -701,6 +706,14 @@ header.sticky .group:has(.input:hover) .input::placeholder {
   .second-footer .footer-right a {
     display: block;
     margin: 0.2rem 0.7rem;
+  }
+  .menus h1{
+    font-size: 1.5rem;
+    padding-top: 3.5rem;
+  }
+
+  .background{
+    height: 15vh;
   }
 }
 

@@ -517,6 +517,24 @@ footer {
   width: 100%;
 }
 
+/* tittle: style pastel.html -------------------------------------------------------- */
+.container-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  padding: 0 70px;
+}
+
+.img img{
+  height: 300px;
+}
+
+.describe-product h1{
+  text-align: left;
+}
+
 /* note: Sticky --------------------------------------------------------------------- */
 header.sticky {
   position: fixed;

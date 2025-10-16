@@ -523,6 +523,7 @@ footer {
   border: 2px solid var(--second-color);
   border-radius: 10px;
   width: 100%;
+  font-family: "Merriweather", serif;
 }
 
 /* tittle: style brownies.html ------------------------------------------------------ */

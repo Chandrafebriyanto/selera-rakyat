@@ -949,7 +949,7 @@ header.sticky .active {
 
   header nav ul li a {
     color: var(--first-color);
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 
   header nav ul li a:hover {

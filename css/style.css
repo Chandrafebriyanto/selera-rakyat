@@ -883,6 +883,25 @@ header.sticky .active {
   .footer-right img {
     height: 30px;
   }
+
+  .product-details-container {
+    flex-direction: column; /* Tumpuk gambar dan info */
+    max-width: 95%;
+    margin-top: 10vh;
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  .product-image-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-product-image {
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 @media (max-width: 779px) {
@@ -1014,7 +1033,48 @@ header.sticky .active {
   }
 
   .product-details-container {
-    font-size: 10%;
+    flex-direction: column; /* Menumpuk konten */
+    max-width: 95%;
+    margin-top: 10vh;
+    padding: 15px;
+    font-size: initial; /* Memastikan ukuran font normal */
+  }
+
+  .product-image-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-product-image {
+    max-width: 100%; /* Gambar menyesuaikan lebar container mobile */
+    height: auto;
+  }
+
+  .product-info-section {
+    gap: 10px;
+    text-align: center; /* Rata tengah konten info */
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-price-panel {
+    justify-content: center; /* Rata tengah harga */
+    padding: 10px;
+  }
+
+  .current-price {
+    font-size: 1.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column; /* Tombol Beli Sekarang menumpuk */
+    gap: 10px;
+  }
+
+  .quantity-selector {
+    justify-content: center;
   }
 }
 

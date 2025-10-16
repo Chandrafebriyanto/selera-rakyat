@@ -10,16 +10,6 @@ $(document).ready(function () {
     }
   });
 
-  // // note: Program Hamburger Menu
-  // $("#hamburger-icon").click(function () {
-  //   $("#mobile-menu").toggleClass("active");
-  // });
-
-  // // note: Tutup menu saat link diklik
-  // $("#mobile-menu a").click(function () {
-  //   $("#mobile-menu").removeClass("active");
-  // });
-
   // note: count quantity
   $("#plus").on("click", function (e) {
     e.preventDefault();
@@ -61,7 +51,7 @@ $(document).ready(function () {
       " " +
       qty +
       " pack. Mohon dikonfirmasi ya kalau masih tersedia, terima kasih banyak!";
-    var phone = "6285161236246";
+    var phone = "6285730779326";
     var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
     window.open(url, "_blank");
   });
@@ -126,7 +116,7 @@ Saya ${name} dengan email ${email} mau kasih sedikit pesan:
 ${messageText}
 
 Terima kasih sudah terus menghadirkan jajanan tradisional yang enak dan berkualitas. Sukses selalu untuk Selera Rakyat – terus pertahankan cita rasanya!`; 
-    const phone = "6285161236246";
+    const phone = "6285730779326";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(
       fullMessage
     )}`;

@@ -210,10 +210,6 @@ input:hover {
   transition: 0.3s ease;
 }
 
-.hamburger {
-  display: none;
-}
-
 .group:has(.input:focus) .icon,
 .group:has(.input:hover) .icon {
   fill: var(--fourth-color);
@@ -789,14 +785,14 @@ textarea:focus {
 #notification {
   display: none;
   width: fit-content;
-  max-width: 75%; /* Tambahkan agar tidak terlalu lebar di layar kecil */
-  margin: -20px auto 30px auto; /* Sesuaikan margin */
+  max-width: 75%;
+  margin: -20px auto 30px auto;
   padding: 10px 25px;
-  background-color: var(--fourth-color); /* Perbaikan variabel */
+  background-color: var(--fourth-color);
   color: var(--first-color);
   text-align: center;
   border-radius: 8px;
-  box-shadow: black 0px 0px 5px; /* Perbaikan variabel */
+  box-shadow: black 0px 0px 5px;
 }
 
 /* note: Sticky --------------------------------------------------------------------- */
@@ -852,21 +848,15 @@ header.sticky .active {
 
 /* tittle: media responsif --------------------------------------------------------- */
 @media (max-width: 992px) {
-  header {
-    padding: 1rem 30px; /* Kurangi padding header */
-  }
-
   .menu {
     padding: 2rem;
   }
   .menu-items {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk menu */
-    gap: 1.5rem;
-    padding: 1rem;
+    grid-template-columns: auto auto;
+    gap: 1rem;
   }
   .coupon {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk promo */
-    padding: 1rem;
+    grid-template-columns: auto auto;
   }
 
   .about {
@@ -892,22 +882,6 @@ header.sticky .active {
 
   .footer-right img {
     height: 30px;
-  }
-
-  /* Layout Detail Produk (menus/*.html) */
-  .product-details-container {
-    flex-direction: column; /* Tumpuk gambar dan info */
-    max-width: 95%;
-    margin-top: 10vh;
-  }
-
-  .product-image-section {
-    width: 100%;
-  }
-
-  .main-product-image {
-    max-width: 350px;
-    margin: 0 auto;
   }
 }
 
@@ -948,10 +922,6 @@ header.sticky .active {
 }
 
 @media (max-width: 540px) {
-  header {
-    padding: 1rem 20px;
-  }
-
   .header-left img {
     height: 30px;
   }
@@ -960,91 +930,55 @@ header.sticky .active {
     font-size: 1.2rem;
   }
 
-  /* Sembunyikan Nav Desktop dan Search Bar */
-  header nav {
-    /* Gaya untuk menu mobile (hamburger) */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 75%; /* Lebar menu saat terbuka */
-    height: 100vh;
-    background-color: var(--fourth-color);
-    z-index: 999;
-    transform: translateX(100%); /* Sembunyikan di luar layar */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
+  header {
+    padding: 1rem 2rem;
   }
 
-  header nav.active {
-    transform: translateX(0); /* Tampilkan menu */
+  header ul {
+    gap: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  header nav {
+    font-size: 20%;
   }
 
   header nav ul {
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 3rem; /* Jarak antara menu dan search */
+    gap: 0.5rem;
   }
 
   header nav ul li a {
     color: var(--first-color);
-    font-size: 1.5rem;
-    border-bottom: none; /* Hapus border bottom active default */
+    font-size: 0.5rem;
   }
 
-  header nav ul li a.active {
-    border-bottom: 3px solid var(--second-color);
-    padding-bottom: 5px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  header nav ul li a:hover {
+    color: var(--second-color);
   }
 
-  /* Tampilkan hamburger */
-  .hamburger {
-    display: block;
-    fill: #4e1f00;
-    width: 1.5rem;
-    height: 1.5rem;
+  .group {
+    max-width: 150px;
+    gap: 0.5rem;
   }
 
-  /* Sembunyikan search bar di header utama */
-  header > .group {
+  .input {
+    height: 30px;
+    line-height: 20px;
+    padding-left: 1.5rem;
+    font-size: 0.7rem;
     display: none;
   }
 
-  /* Tampilkan dan atur gaya search bar di dalam nav mobile */
-  header nav .group {
-    display: flex;
-    max-width: 90%;
-    line-height: normal;
+  .icon {
+    width: 0.7rem;
+    height: 0.7rem;
+    left: 0.7rem;
+    display: none;
   }
 
-  header nav .input {
-    background-color: var(--third-color);
-    color: var(--first-color);
-    font-size: 0.9rem;
-    height: 40px;
-    line-height: 28px;
-    padding-left: 2.5rem;
-    display: block;
-  }
-
-  header nav .icon {
-    fill: var(--first-color);
-    left: 1rem;
-    width: 1rem;
-    height: 1rem;
-    display: block;
-  }
-
-  /* Layout 1 Kolom untuk Menu dan Promo */
   .menu-items,
   .coupon {
     grid-template-columns: 1fr;
-    padding: 1rem 0.5rem;
   }
 
   .coupon-container {
@@ -1052,11 +986,6 @@ header.sticky .active {
     max-width: 350px;
   }
 
-  .menu-item img {
-    height: 150px; /* Tinggi gambar lebih kecil di mobile */
-  }
-
-  /* Footer */
   .main-footer,
   .second-footer {
     flex-direction: column;
@@ -1064,7 +993,7 @@ header.sticky .active {
   }
 
   .footer-left img {
-    height: 80px;
+    height: 100px;
   }
 
   .footer-right img {
@@ -1075,7 +1004,6 @@ header.sticky .active {
     display: block;
     margin: 0.2rem 0.7rem;
   }
-
   .menus h1 {
     font-size: 1.5rem;
     padding-top: 3.5rem;
@@ -1085,13 +1013,8 @@ header.sticky .active {
     height: 18vh;
   }
 
-  /* Gaya Detail Produk (menus/*.html) */
-  .product-info-section {
-    text-align: center;
-  }
-
-  .action-buttons {
-    justify-content: center;
+  .product-details-container {
+    font-size: 10%;
   }
 }
 

@@ -10,15 +10,15 @@ $(document).ready(function () {
     }
   });
 
-  // note: Program Hamburger Menu
-  $("#hamburger-icon").click(function () {
-    $("#mobile-menu").toggleClass("active");
-  });
+  // // note: Program Hamburger Menu
+  // $("#hamburger-icon").click(function () {
+  //   $("#mobile-menu").toggleClass("active");
+  // });
 
-  // note: Tutup menu saat link diklik
-  $("#mobile-menu a").click(function () {
-    $("#mobile-menu").removeClass("active");
-  });
+  // // note: Tutup menu saat link diklik
+  // $("#mobile-menu a").click(function () {
+  //   $("#mobile-menu").removeClass("active");
+  // });
 
   // note: count quantity
   $("#plus").on("click", function (e) {

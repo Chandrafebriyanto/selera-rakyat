@@ -46,23 +46,51 @@ $(document).ready(function () {
     var $btn = $(this);
     var product =
       $btn
-        .closest(".product-info-section") 
+        .closest(".product-info-section")
         .find(".product-title")
         .first()
         .text()
         .trim() ||
-      $(".product-title").first().text().trim() || 
+      $(".product-title").first().text().trim() ||
       "";
     var qty = parseInt($("#quantity").val(), 10);
     if (isNaN(qty) || qty < 1) qty = 1;
     var message =
-      "Permisi saya ingin memesan " +
-      product +
-      " dengan jumlah " +
+      "Hai Selera Rakyat, saya mau order " +
+      product + " " +
       qty +
-      " apakah bisa?";
+      " pack. Mohon dikonfirmasi ya kalau masih tersedia, terima kasih banyak!";
     var phone = "6285161236246";
     var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
     window.open(url, "_blank");
   });
+
+  // note: search bar
+  function setupSearchBar() {
+    var $input = $(".input");
+    var $menuItems = $(".menu-item");
+
+    if ($input.length === 0 || $menuItems.length === 0) return;
+
+    $input.on("input", function () {
+      var query = $.trim($(this).val()).toLowerCase();
+
+      if (query === "") {
+        $menuItems.show();
+        return;
+      }
+
+      $menuItems.each(function () {
+        var $item = $(this);
+        var title = $item.find("h3").first().text().toLowerCase();
+        if (title.indexOf(query) !== -1) {
+          $item.show();
+        } else {
+          $item.hide();
+        }
+      });
+    });
+  }
+
+  setupSearchBar();
 });

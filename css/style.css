@@ -663,7 +663,7 @@ footer {
   border-right: 1px solid #ccc;
   padding: 6px 0;
 }
- number */
+
 .quantity-input input:focus {
   outline: none;
 }
